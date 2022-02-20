@@ -32,13 +32,22 @@ def process_ans(message):
     :return:
     """
     if RESPONSE in message:
-        if message(RESPONSE) == 200:
+        if message[RESPONSE] == 200:
             return '200: OK'
         return f'400: {message[ERROR]}'
     raise ValueError
 
 
 def main():
+    transport = fill_param_and_init_socket()
+    try:
+        answer = process_ans(get_message(transport))
+        print(answer)
+    except (ValueError, json.JSONDecodeError):
+        print('Failed to decode server messages')
+
+
+def fill_param_and_init_socket():
     """Загружаем параметры командной строки"""
     try:
         server_address = sys.argv[1]
@@ -51,18 +60,12 @@ def main():
     except ValueError:
         print('The port can only be a number between 1024 and 65535')
         sys.exit(1)
-
     # Инициализация сокета и обмен
-
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     transport.connect((server_address, server_port))
     message_to_server = create_presence()
     send_message(transport, message_to_server)
-    try:
-        answer = process_ans(get_message(transport))
-        print(answer)
-    except (ValueError, json.JSONDecodeError):
-        print('Failed to decode server messages')
+    return transport
 
 
 if __name__ == '__main__':
