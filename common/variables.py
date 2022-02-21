@@ -1,5 +1,6 @@
-
 # Порт по дефолту для сетевого взаимодействия
+import logging
+
 DEFAULT_PORT = 7777
 
 # TCP по дефолту для подключения к клиенту
@@ -24,3 +25,5 @@ PRESENCE = 'presence'
 RESPONSE = 'response'
 ERROR = 'error'
 RESPONDEFAULT_IP_ADDRESS = 'respondefault_ip_address'
+
+LOGGING_LEVEL = logging.DEBUG
