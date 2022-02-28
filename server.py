@@ -1,9 +1,11 @@
+import argparse
 import logging
 import socket
 import sys
 import json
 from pprint import pprint
 import log.server_log_config
+from decorator_log import log
 
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, USER, \
     ERROR, DEFAULT_PORT, RESPONDEFAULT_IP_ADDRESS
@@ -14,7 +16,7 @@ server_logger = logging.getLogger('server')
 
 # pprint(sys.path)
 
-
+@log
 def process_client_message(message):
     """
     Обработчик сообщений от клиентов,
@@ -23,6 +25,7 @@ def process_client_message(message):
     :param message:
     :return:
     """
+    server_logger.debug(f'разбор сообщения от клиента: {message}')
     con1 = message[ACTION] == PRESENCE
     con2 = TIME in message
     con3 = USER in message
@@ -33,6 +36,14 @@ def process_client_message(message):
         RESPONDEFAULT_IP_ADDRESS: 400,
         ERROR: 'Bad Request'
     }
+
+
+def create_arg_parser():
+    """Парсер аргументов командной строки"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-p', default=DEFAULT_PORT, type=int, nargs='?')
+    parser.add_argument('-a', default='', nargs='?')
+    return parser
 
 
 def main():
