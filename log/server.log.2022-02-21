@@ -1,0 +1,4 @@
+2022-02-21 16:00:43,661 - CRITICAL - server_log_config.py - Критическая ошибка 
+2022-02-21 16:00:43,661 - ERROR - server_log_config.py - Ошибка 
+2022-02-21 16:00:43,661 - DEBUG - server_log_config.py - Отладка 
+2022-02-21 16:00:43,661 - INFO - server_log_config.py - Информационное сообщение 
