@@ -1,41 +1,28 @@
-2022-03-18 13:40:59,891 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:40:59,891 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:41:36,062 - INFO - server.py - Установлено соединение('127.0.0.1', 51200) 
-2022-03-18 13:41:36,563 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647600096.0629442, 'user': {'account_name': 'Guest'}} 
-2022-03-18 13:41:36,564 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647600096.0629442, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51200)>), {}Вызов из функции main() 
-2022-03-18 13:42:04,224 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:42:04,224 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:42:34,629 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:42:34,629 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:42:40,756 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:42:40,756 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:43:39,997 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:43:39,997 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:43:51,542 - INFO - server.py - Установлено соединение('127.0.0.1', 51202) 
-2022-03-18 13:43:51,543 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647600231.5429008, 'user': {'account_name': 'Guest'}} 
-2022-03-18 13:43:51,543 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647600231.5429008, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51202)>), {}Вызов из функции main() 
-2022-03-18 13:44:32,061 - INFO - server.py - Установлено соединение('127.0.0.1', 51206) 
-2022-03-18 13:44:32,061 - INFO - server.py - Клиент ('127.0.0.1', 51202) отключился от сервера. 
-2022-03-18 13:44:32,563 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647600272.0617802, 'user': {'account_name': 'Guest'}} 
-2022-03-18 13:44:32,564 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647600272.0617802, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51206)>), {}Вызов из функции main() 
-2022-03-18 13:47:17,259 - INFO - server.py - Клиент ('127.0.0.1', 51206) отключился от сервера. 
-2022-03-18 13:47:17,326 - INFO - server.py - Установлено соединение('127.0.0.1', 51208) 
-2022-03-18 13:47:17,827 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647600437.3267243, 'user': {'account_name': 'Guest'}} 
-2022-03-18 13:47:17,827 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647600437.3267243, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51208)>), {}Вызов из функции main() 
-2022-03-18 13:50:57,033 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:50:57,033 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:51:08,163 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:51:08,163 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:51:31,639 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:51:31,639 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:53:02,054 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 13:53:02,055 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 13:53:49,412 - INFO - server.py - Установлено соединение('127.0.0.1', 51210) 
-2022-03-18 13:53:49,913 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647600829.4126956, 'user': {'account_name': 'Guest'}} 
-2022-03-18 13:53:49,914 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647600829.4126956, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51210)>), {}Вызов из функции main() 
-2022-03-18 14:01:05,936 - INFO - server.py - Клиент ('127.0.0.1', 51210) отключился от сервера. 
-2022-03-18 14:22:01,855 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
-2022-03-18 14:22:01,856 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
-2022-03-18 14:23:24,835 - INFO - server.py - Установлено соединение('127.0.0.1', 51212) 
-2022-03-18 14:23:50,369 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647602616.7663307, 'user': {'account_name': 'Guest'}} 
-2022-03-18 14:23:50,370 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647602616.7663307, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51212)>), {}Вызов из функции main() 
+2022-03-19 21:18:18,411 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:18:18,411 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:18:28,876 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:18:28,876 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:18:38,624 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:18:38,624 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:19:08,843 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:19:08,843 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:19:20,366 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:19:20,384 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:19:31,989 - INFO - server.py - Установлено соединение('127.0.0.1', 51232) 
+2022-03-19 21:19:32,347 - INFO - server.py - Установлено соединение('127.0.0.1', 51234) 
+2022-03-19 21:19:32,348 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647713971.9897964, 'user': {'account_name': 'Guest'}} 
+2022-03-19 21:19:32,349 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647713971.9897964, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51232)>), {}Вызов из функции main() 
+2022-03-19 21:19:32,368 - DEBUG - decorator_log.py - Функция create_arg_parser с параметрами (), {}Вызов из функции main() 
+2022-03-19 21:19:32,368 - INFO - server.py - Запущен сервер, порт для подключений: 7777, Адрес приема подключения: . Если адрес не указан, принимаются соединения с любых адресов. 
+2022-03-19 21:19:32,389 - INFO - server.py - Установлено соединение('127.0.0.1', 51236) 
+2022-03-19 21:19:32,390 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647713972.3531911, 'user': {'account_name': 'Guest'}} 
+2022-03-19 21:19:32,390 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647713972.3531911, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51234)>), {}Вызов из функции main() 
+2022-03-19 21:19:32,891 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647713972.3909338, 'user': {'account_name': 'Guest'}} 
+2022-03-19 21:19:32,891 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647713972.3909338, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51236)>), {}Вызов из функции main() 
+2022-03-19 21:19:33,141 - INFO - server.py - Установлено соединение('127.0.0.1', 51238) 
+2022-03-19 21:19:33,641 - DEBUG - server.py - разбор сообщения от клиента: {'action': 'presence', 'time': 1647713973.1414685, 'user': {'account_name': 'Guest'}} 
+2022-03-19 21:19:33,642 - DEBUG - decorator_log.py - Функция process_client_message с параметрами ({'action': 'presence', 'time': 1647713973.1414685, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51238)>), {}Вызов из функции main() 
+2022-03-19 21:20:05,699 - INFO - server.py - Клиент ('127.0.0.1', 51232) отключился от сервера. 
+2022-03-19 21:20:05,699 - INFO - server.py - Клиент ('127.0.0.1', 51234) отключился от сервера. 
+2022-03-19 21:20:05,699 - INFO - server.py - Клиент ('127.0.0.1', 51236) отключился от сервера. 
+2022-03-19 21:20:05,702 - INFO - server.py - Клиент ('127.0.0.1', 51238) отключился от сервера. 
