@@ -39,3 +39,5 @@ RESPONSE_400 = {
     ERROR: None
 }
 
+# База данных для хранения данных сервера:
+SERVER_DATABASE = 'sqlite:///server_base.db3'
