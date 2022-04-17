@@ -1,21 +1,20 @@
 import argparse
+import sys
 import json
 import socket
 import time
 import sys
-
 import log.server_log_config
 import logging
 
 from common.utils import send_message, get_message
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, \
     ERROR, DEFAULT_PORT, DEFAULT_IP_ADRESS, MESSAGE, SENDER, MESSAGE_TEXT
-from errors import ServerError, ReqFieldMissingError
+
 from decorator_log import log
+from errors import ServerError, ReqFieldMissingError
 
-# Инициализация клиентского логера
 client_logger = logging.getLogger('client')
-
 
 @log
 def message_from_server(message):
@@ -33,8 +32,8 @@ def message_from_server(message):
 @log
 def create_message(sock, account_name='Guest'):
     """Запрос текста сообщения"""
-    message = input('Введите сообщение или \'!!!\' для завершения работы')
-    if message == '!!!':
+    message = input('Введите сообщение или \'exit\' для завершения работы')
+    if message == 'exit':
         sock.close()
         client_logger.info('Завершение работы по команде от пользователя')
         print('Выход')
@@ -49,6 +48,7 @@ def create_message(sock, account_name='Guest'):
     return message_dict
 
 
+@log
 def create_presence(account_name='Guest'):
     """
     Генерирует запрос о присутствии клиента
@@ -66,7 +66,7 @@ def create_presence(account_name='Guest'):
 
     return out
 
-
+@log
 def process_ans(message):
     """
     Разбирает ответ сервера
@@ -110,7 +110,6 @@ def arg_parser():
         sys.exit(1)
 
     return server_address, server_port, client_mode
-
 
 def main():
     """Загружаем параметры командной строки"""
@@ -170,3 +169,15 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+
+
+
+
+
