@@ -20,6 +20,7 @@ TIME = 'time'
 USER = 'user'
 ACCOUNT_NAME = 'account_name'
 SENDER = 'sender'
+DESTINATION = 'to'
 
 # Прочие ключи
 PRESENCE = 'presence'
@@ -28,8 +29,13 @@ ERROR = 'error'
 RESPONDEFAULT_IP_ADDRESS = 'respondefault_ip_address'
 MESSAGE = 'message'
 MESSAGE_TEXT = 'mess_text'
+EXIT = 'exit'
 
 LOGGING_LEVEL = logging.DEBUG
 
-
+RESPONSE_200 = {RESPONSE: 200}
+RESPONSE_400 = {
+    RESPONSE: 400,
+    ERROR: None
+}
 
