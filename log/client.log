@@ -1,0 +1,4 @@
+2022-02-21 16:10:59,355 - CRITICAL - client_log_config.py - Критическая ошибка 
+2022-02-21 16:10:59,355 - ERROR - client_log_config.py - Ошибка 
+2022-02-21 16:10:59,355 - DEBUG - client_log_config.py - Отладка 
+2022-02-21 16:10:59,355 - INFO - client_log_config.py - Информационное сообщение 

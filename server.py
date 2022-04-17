@@ -1,12 +1,19 @@
+import logging
 import socket
 import sys
 import json
 from pprint import pprint
+import log.server_log_config
 
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, USER, \
     ERROR, DEFAULT_PORT, RESPONDEFAULT_IP_ADDRESS
 from common.utils import get_message, send_message
+
+server_logger = logging.getLogger('server')
+
+
 # pprint(sys.path)
+
 
 def process_client_message(message):
     """
@@ -43,11 +50,12 @@ def main():
         if listen_port < 1024 or listen_port > 65535:
             raise ValueError
     except IndexError:
-        print('After -\'p\' need to specify the port number')
+        server_logger.critical(f'Попытка запуска сервера с указанием неподходящего порта')
         sys.exit(1)
     except ValueError:
-        print('The port can only be a number between 1024 and 65535')
+        server_logger.critical(f'{listen_port} Допустимы адреса с 1024 до 65535')
         sys.exit(1)
+    server_logger.info(f'Запущен сервер, порт для подключений: {listen_port}')
 
     # Загрузка адреса, который будем слушать
 
@@ -58,13 +66,14 @@ def main():
             listen_address = ''
 
     except IndexError:
-        print('After \'a\' need to specify the address that the server will listen to')
+        server_logger.info(f'After \'a\' need to specify the address that the server will listen to')
         sys.exit(1)
 
     # Готовим сокет
 
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    transport.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # для отладки, чтобы долго не ждать перезапуска сервера
+    transport.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,
+                         1)  # для отладки, чтобы долго не ждать перезапуска сервера
     transport.bind((listen_address, listen_port))
 
     # Слушаем порт
@@ -73,39 +82,20 @@ def main():
 
     while True:
         client, client_address = transport.accept()  # принимаем клиента
+        server_logger.info(f'Установлено соединение{client_address}')
         try:
             message_from_client = get_message(client)  # приходит сообщение
-            print(message_from_client)
+            server_logger.debug(f'Получено сообщение {message_from_client}')
             response = process_client_message(message_from_client)  # обработка сообщения {RESPONSE: 200}
+            server_logger.info(f'Сформирован ответ клиенту{response}')
             send_message(client, response)
+            server_logger.debug(f'Соединение с клиентом закрывается {client_address}')
             client.close()
-        except (ValueError, json.JSONDecodeError):
-            print('Incorrect message received from client')
+        except json.JSONDecodeError:
+            server_logger.error(f'Не удалось декодировать строку, полученную от клиента{client_address}'
+                                f'От клиента приняты некорректные данные {client_address}')
             client.close()
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

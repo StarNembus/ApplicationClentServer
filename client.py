@@ -2,10 +2,14 @@ import json
 import socket
 import time
 import sys
+import log.server_log_config
+import logging
 
 from common.utils import send_message, get_message
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, PRESENCE, TIME, USER, \
     ERROR, DEFAULT_PORT, DEFAULT_IP_ADRESS
+
+client_logger = logging.getLogger('client')
 
 
 def create_presence(account_name='Guest'):
@@ -21,6 +25,7 @@ def create_presence(account_name='Guest'):
             ACCOUNT_NAME: account_name
         }
     }
+    client_logger.debug(f'Сформировано {PRESENCE} сообщение для пользователя{account_name}')
 
     return out
 
@@ -42,9 +47,10 @@ def main():
     transport = fill_param_and_init_socket()
     try:
         answer = process_ans(get_message(transport))
+        client_logger.info(f'Принят ответ от сервера {answer}')
         print(answer)
     except (ValueError, json.JSONDecodeError):
-        print('Failed to decode server messages')
+        client_logger.error(f'Не удалось декодировать JSON строку')
 
 
 def fill_param_and_init_socket():
@@ -58,7 +64,7 @@ def fill_param_and_init_socket():
         server_address = DEFAULT_IP_ADRESS
         server_port = DEFAULT_PORT
     except ValueError:
-        print('The port can only be a number between 1024 and 65535')
+        client_logger.critical(f'Не удалось подключиться к серверу {server_address}: {server_port}')
         sys.exit(1)
     # Инициализация сокета и обмен
     transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
