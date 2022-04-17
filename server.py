@@ -1,10 +1,12 @@
 import socket
 import sys
 import json
-from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, USER, \
-    ERROR, DEFAULT_PORT, RESPONDAEFAULT_IP_ADDRESS
-from common.utils import get_message, send_message
+from pprint import pprint
 
+from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, USER, \
+    ERROR, DEFAULT_PORT, RESPONDEFAULT_IP_ADDRESS
+from common.utils import get_message, send_message
+# pprint(sys.path)
 
 def process_client_message(message):
     """
@@ -14,11 +16,14 @@ def process_client_message(message):
     :param message:
     :return:
     """
-    if ACTION in message[ACTION] == PRESENCE and TIME in message \
-            and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':  # обработка сообщений, сравнение ключей
+    con1 = message[ACTION] == PRESENCE
+    con2 = TIME in message
+    con3 = USER in message
+    con4 = message[USER][ACCOUNT_NAME] == 'Guest'
+    if con1 and con2 and con3 and con4:  # обработка сообщений, сравнение ключей
         return {RESPONSE: 200}
     return {
-        RESPONDAEFAULT_IP_ADDRESS: 400,
+        RESPONDEFAULT_IP_ADDRESS: 400,
         ERROR: 'Bad Request'
     }
 

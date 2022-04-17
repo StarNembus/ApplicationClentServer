@@ -30,6 +30,8 @@ def send_message(sock, message):
     :param message:
     :return:
     """
+    # if not isinstance(message, dict):
+    #     raise TypeError
     js_message = json.dumps(message)  # с помощью dumps получаем строку
     encoded_message = js_message.encode(ENCODING)  # кодируем
     sock.send(encoded_message)  # получаем байты
