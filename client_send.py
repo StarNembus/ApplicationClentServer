@@ -1,10 +1,8 @@
 import argparse
-import sys
 import json
 import socket
 import time
 import sys
-import log.server_log_config
 import logging
 
 from common.utils import send_message, get_message
@@ -169,6 +167,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
 
