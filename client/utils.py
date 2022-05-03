@@ -1,4 +1,6 @@
 """Утилиты"""
+
+from variables1 import MAX_PACKAGE_LENGTH, ENCODING
 import json
 import sys
 
